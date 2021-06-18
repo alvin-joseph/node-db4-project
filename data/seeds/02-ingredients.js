@@ -6,6 +6,10 @@ exports.seed = function(knex) {
       return knex('ingredients').insert([
         {ingredient_name: 'meatball'},
         {ingredient_name: 'meatball again'},
+        {ingredient_name: 'pepperoni'},
+        {ingredient_name: 'sausage'},
+        {ingredient_name: 'ribs'},
+        {ingredient_name: 'rub'},
       ]);
     });
 };

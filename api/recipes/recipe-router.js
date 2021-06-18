@@ -4,6 +4,14 @@ const Recipe = require('./recipe-model.js')
 
 const router = express.Router()
 
+router.get('/', (req, res, next) => {
+  Recipe.getAll()
+    .then(recipes => {
+      res.json(recipes)
+    })
+    .catch(next)
+})
+
 router.get('/:recipe_id', checkRecipeId, (req, res, next) => {
     Recipe.getRecipeById(req.params.recipe_id)
         .then(recipe => {

@@ -17,7 +17,7 @@ const sharedConfig = {
 }
 
 module.exports = {
-  development: {
+  development: { //process.env.NODE_ENV || 'development' in dbconfig file
     ...sharedConfig,
     connection: { filename: './data/recipes.db3' },
   },
