@@ -1,0 +1,15 @@
+exports.seed = function(knex) {
+  // Deletes ALL existing entries
+  return knex('ingredients').del()
+    .then(function () {
+      // Inserts seed entries
+      return knex('ingredients').insert([
+        {ingredient_name: 'meatball'},
+        {ingredient_name: 'meatball again'},
+        {ingredient_name: 'pepperoni'},
+        {ingredient_name: 'sausage'},
+        {ingredient_name: 'ribs'},
+        {ingredient_name: 'rub'},
+      ]);
+    });
+};
